@@ -5,8 +5,8 @@ machine:
 dependencies:
   override:
     - docker info
-    - docker build -t casperjs .
+    - docker build -t vdmtl/docker-casperjs .
 
 test:
   override:
-  - docker run casperjs --version
+  - docker run vdmtl/docker-casperjs casperjs --version
