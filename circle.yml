@@ -1,0 +1,12 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  override:
+    - docker info
+    - docker build -t casperjs .
+
+test:
+  override:
+  - docker run casperjs --version
